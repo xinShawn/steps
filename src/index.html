@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+    <link rel="stylesheet" href="./steps.css">
+</head>
+<body>
+    <div class="steps-wrapper"></div>
+
+<script src="./steps.js"></script>
+<script>
+    steps({
+        el: '.steps-wrapper',
+        data: [
+            { title: "阶段1", description: "这是第一阶段" },
+            { title: "阶段2", description: "这是第二阶段" },
+            { title: "阶段3", description: "这是第三阶段" },
+            { title: "阶段4", description: "这是第四阶段" }
+        ],
+        wrapperWidth: '800px', // 容器的宽度，默认是100%
+        active: 0, // 当前激活项，从0开始
+        position: 0, // 用户所处位置，也是从0开始
+        dataOrder: ['line', 'title', 'description'], // 纵向数据显示的顺序
+    });
+</script>
+</body>
+</html>
